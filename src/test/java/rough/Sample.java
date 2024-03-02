@@ -9,12 +9,13 @@ public class Sample {
 
 	public static void main(String[] args) {
 		
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.google.com/");
-		//String text ="Selenium";
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		System.out.println(js.executeScript("return arguments[0].innerText;",driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[1]/div/div[1]/a"))));
-		
+		try {
+			System.out.println(10/0);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	

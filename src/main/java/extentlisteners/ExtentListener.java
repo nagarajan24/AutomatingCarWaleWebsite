@@ -53,7 +53,7 @@ public class ExtentListener implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		// Generating exception message in extent report
-		String expMsg = Arrays.toString(result.getThrowable().getStackTrace());
+		String expMsg = result.getThrowable().getMessage();
 		test.fail(expMsg);
 
 		// Capturing Screenshot
