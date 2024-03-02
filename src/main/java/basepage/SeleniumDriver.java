@@ -83,17 +83,18 @@ public class SeleniumDriver {
 
 			log.info("Config property file loaded successfully");
 			
-			if (config.getProperty("browser").equalsIgnoreCase("chrome")) {
+			//Getting the browser data from jenkins
+			if (System.getenv("browser").equalsIgnoreCase("chrome")) {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--disable-notifications");
 
 				driver = new ChromeDriver(options);
 				log.info("Chrome browser launched");
-			} else if (config.getProperty("browser").equalsIgnoreCase("firefox")) {
+			} else if (System.getenv("browser").equalsIgnoreCase("firefox")) {
 
 				driver = new FirefoxDriver();
 				log.info("Firefox browser launched");
-			} else if (config.getProperty("browser").equalsIgnoreCase("edge")) {
+			} else if (System.getenv("browser").equalsIgnoreCase("edge")) {
 
 				driver = new EdgeDriver();
 				log.info("Edge browser launched");
