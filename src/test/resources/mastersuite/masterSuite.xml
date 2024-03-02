@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automating CarWale Website Test Suite">
+
+<suite-files>
+<suite-file path="C:\Users\nagar\eclipse-MyFirstProject\AutomatingCarWaleWebsite\src\test\resources\testcaseSuiteFiles\newcarsSuite.xml"></suite-file>
+<suite-file path="C:\Users\nagar\eclipse-MyFirstProject\AutomatingCarWaleWebsite\src\test\resources\testcaseSuiteFiles\searchcarsSuite.xml"></suite-file>
+<suite-file path="C:\Users\nagar\eclipse-MyFirstProject\AutomatingCarWaleWebsite\src\test\resources\testcaseSuiteFiles\usedcarsSuite.xml"></suite-file>
+</suite-files>
+	
+</suite> <!-- Suite -->

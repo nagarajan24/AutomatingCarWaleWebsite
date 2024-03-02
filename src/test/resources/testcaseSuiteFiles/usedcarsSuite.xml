@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Used Cars Test Suite">
+
+	<!-- Listener tag for extent report and report ng -->
+	<listeners>
+		<listener class-name="extentlisteners.ExtentListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+
+
+	<!-- TESTCASES -->
+
+	<test thread-count="5" name="Buy used cars test">
+		<classes>
+			<class name="testcases.BuyUsedCarsTest" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="5" name="Sell your car test">
+		<classes>
+			<class name="testcases.SellYourCarTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<!-- End of test cases -->
+	
+</suite> <!-- Suite -->
