@@ -35,7 +35,7 @@ public class DataUtil {
 		return data;
 	}
 	
-	//FileWriter to write text in file
+	//FileWriter to write title in file
 	public static void fileWriterForHeader(String fileLocation,String header)
 	{
 		try {
@@ -48,7 +48,7 @@ public class DataUtil {
 		}
 	}
 	
-	//FileWriter to write text in file
+	//FileWriter to write data in file
 	public static void fileWriter(String fileLocation, String data)
 	{
 		try {
