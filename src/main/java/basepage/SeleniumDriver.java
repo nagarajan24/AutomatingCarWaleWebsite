@@ -107,6 +107,30 @@ public class SeleniumDriver {
 				log.info("Chrome browser launched");
 			}
 			
+			//Uncomment this code while running using testng or Maven
+//			if (config.getProperty("browser").equalsIgnoreCase("chrome")) {
+//				ChromeOptions options = new ChromeOptions();
+//				options.addArguments("--disable-notifications");
+//
+//				driver = new ChromeDriver(options);
+//				log.info("Chrome browser launched");
+//			} else if (config.getProperty("browser").equalsIgnoreCase("firefox")) {
+//
+//				driver = new FirefoxDriver();
+//				log.info("Firefox browser launched");
+//			} else if (config.getProperty("browser").equalsIgnoreCase("edge")) {
+//
+//				driver = new EdgeDriver();
+//				log.info("Edge browser launched");
+//			} else {
+//				// If none of the values matches,chrome browser will launch by default
+//				ChromeOptions options = new ChromeOptions();
+//				options.addArguments("--disble-notifications");
+//
+//				driver = new ChromeDriver(options);
+//				log.info("Chrome browser launched");
+//			}
+			
 			// Maximizing the browser
 			driver.manage().window().maximize();
 			// Implementing implicit wait
