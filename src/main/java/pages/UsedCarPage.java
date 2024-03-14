@@ -33,20 +33,20 @@ public class UsedCarPage{
 		
 		//Select Car Age
 		//Start Car Age
-		SeleniumDriver.click("carAgeDropDown_XPATH");
-		SeleniumDriver.click("carStartAge_XPATH");
-		SeleniumDriver.action.sendKeys(Keys.BACK_SPACE).perform();
-		SeleniumDriver.type("carStartAge_XPATH",params[2]);
-		
-		//End Car Age
-		SeleniumDriver.click("carEndAge_XPATH");
-		SeleniumDriver.action.sendKeys(Keys.BACK_SPACE).perform();
-		SeleniumDriver.type("carEndAge_XPATH", params[3]);
-		SeleniumDriver.click("carStartAge_XPATH");
-		SeleniumDriver.click("carEndAge_XPATH");
-		SeleniumDriver.click("carStartAge_XPATH");
-		SeleniumDriver.click("carEndAge_XPATH");
-		
+//		SeleniumDriver.click("carAgeDropDown_XPATH");
+//		SeleniumDriver.click("carStartAge_XPATH");
+//		SeleniumDriver.action.sendKeys(Keys.BACK_SPACE).perform();
+//		SeleniumDriver.type("carStartAge_XPATH",params[2]);
+//		
+//		//End Car Age
+//		SeleniumDriver.click("carEndAge_XPATH");
+//		SeleniumDriver.action.sendKeys(Keys.BACK_SPACE).perform();
+//		SeleniumDriver.type("carEndAge_XPATH", params[3]);
+//		SeleniumDriver.click("carStartAge_XPATH");
+//		SeleniumDriver.click("carEndAge_XPATH");
+//		SeleniumDriver.click("carStartAge_XPATH");
+//		SeleniumDriver.click("carEndAge_XPATH");
+//		
 		
 		//Select Transmission
 		SeleniumDriver.click("transmission_XPATH");
@@ -57,7 +57,7 @@ public class UsedCarPage{
 		for(WebElement tranmissionType: SeleniumDriver.findElementsforPresenceOfElements("transmissionTypes_XPATH"))
 		{
 			
-			if(tranmissionType.getText().equalsIgnoreCase(params[4]))
+			if(tranmissionType.getText().equalsIgnoreCase(params[3]))
 			{
 				
 				SeleniumDriver.click("transmission_XPATH");

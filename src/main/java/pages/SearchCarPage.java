@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import basepage.JavaScriptCode;
@@ -33,11 +34,25 @@ public class SearchCarPage {
 		SeleniumDriver.click("cityInputBox_XPATH");
 		SeleniumDriver.action.sendKeys(Keys.BACK_SPACE).perform();
 		SeleniumDriver.type("cityInputBox_XPATH", city);
+		
+		//Handling stale element reference exception
+		try {
 		for(WebElement cityOption: SeleniumDriver.findElementsforPresenceOfElements("cityOptions_XPATH"))
 		{
 			//JavaScriptCode.clickOnElement(cityOption);
 			cityOption.click();
 			break;
+		}
+		}
+		catch(StaleElementReferenceException e)
+		{
+			for(WebElement cityOption: SeleniumDriver.findElementsforPresenceOfElements("cityOptions_XPATH"))
+			{
+				//JavaScriptCode.clickOnElement(cityOption);
+				cityOption.click();
+				break;
+			}
+			
 		}
 		
 		SeleniumDriver.click("closeOPtionCityDropdown_XPATH");

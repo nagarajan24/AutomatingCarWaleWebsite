@@ -16,6 +16,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import basepage.JavaScriptCode;
 import basepage.SeleniumDriver;
 import utilities.DataUtil;
 import utilities.ScreenshotUtil;
@@ -35,7 +36,7 @@ public class ExtentListener implements ITestListener {
 		Object[] param = result.getParameters();
 		if (param.length != 0) {
 			test = extent.createTest(
-					result.getTestClass().getClass() + "--@TestCase--" + mtdName + "--@Parameters--" + param[0]);
+					result.getClass().getName() + "--@TestCase--" + mtdName + "--@Parameters--" + param[0]);
 		} else {
 			test = extent.createTest(result.getTestClass().getClass() + "--@TestCase--" + mtdName);
 		}

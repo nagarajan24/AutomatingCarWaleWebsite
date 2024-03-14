@@ -108,5 +108,24 @@ public class JavaScriptCode {
 		ExtentListener.test.info("Scrolling through the page");
 		
 	}
+	
+	//Highlighting an element
+	public static void highlightElement(WebElement element)
+	{
+		js.executeScript("argument[0].setAttribute('style','border: 2px solid red ; background: blue;');", element);
+		SeleniumDriver.log.info("Highlighting element "+element);
+		ExtentListener.test.info("Highlighting element "+element);
+		
+	}
+	
+	//Get elements inside shadow dom
+	public static WebElement getShadowRoot(WebElement element)
+	{
+		WebElement shadowDomElemenet = (WebElement)js.executeScript("return arguments[0].shadowRoot;", element);
+		SeleniumDriver.log.info("Getting shadow dom element "+shadowDomElemenet);
+		ExtentListener.test.info("Getting the shadow dom element "+shadowDomElemenet);
+		return shadowDomElemenet;
+		
+	}
 
 }

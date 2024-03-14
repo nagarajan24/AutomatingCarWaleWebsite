@@ -36,7 +36,7 @@ public class BuyUsedCarsTest extends BaseTest{
 			Assert.assertTrue(SeleniumDriver.getDriver().getTitle().contains(Constants.usedCarPageTitle),"Used car page title doesnot match");
 			
 			//Steps to be performed in used car page
-			ucp.filteringCarOptions(data.get("Budget"), data.get("Manufacturer"), data.get("startCarAge"), data.get("endCarAge"), data.get("carTransmissionType"));
+			ucp.filteringCarOptions(data.get("Budget"), data.get("Manufacturer"),data.get("carTransmissionType"));
 			//Assert.assertTrue(ucp.getNoOfFilteredCars().substring(0, 3).equalsIgnoreCase(data.get("No of cars")));
 
 		}
